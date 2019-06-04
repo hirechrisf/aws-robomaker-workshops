@@ -119,7 +119,7 @@ When complete, you'll navigate your rover in the simulated world, similar to the
     This function does three main tasks:
     
     * It uses the `get_image` function to get an image.  
-    * It passes that image to Amazon Rekognition using the `detect_lables` method of the Rekognition client.  Notice that this method also takes a `MinConfidence` parameter.  The value provided here ensures that Rekognition does return any labels for objects where it was not "50%" confident that it was accurate in identifying the object.
+    * It passes that image to Amazon Rekognition using the `detect_labels` method of the Rekognition client.  Notice that this method also takes a `MinConfidence` parameter.  The value provided here ensures that Rekognition does return any labels for objects where it was not "50%" confident that it was accurate in identifying the object.
     * After sorting the labels, it publishes them as a comma-delimted list on the *detected_objects* topic.
 
 3.  Now let's take a look at the *notifier* node. Recall that this node has the following responsibilities:
